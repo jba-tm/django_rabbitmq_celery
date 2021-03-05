@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from tasks.views import celery_view
+from tasks.views import celery_view, scrape_tweets
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('celerytask/', celery_view)
+    path('celerytask/', celery_view),
+    path('get_tweets/', scrape_tweets)
 ]

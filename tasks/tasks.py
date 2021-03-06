@@ -16,6 +16,7 @@ logger = get_task_logger(__name__)
 def celery_task(counter):
     email = "admin@example.com"
     time.sleep(5)
+    print('celery task')
     return f'{counter} Done!'
 
 
